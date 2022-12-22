@@ -102,7 +102,6 @@ const question = {
 //These functions will add all of my information for the various roles
 
 function addIntern() {
-  ///you need to replace the engineer stuff with intern stuff
   return inquirer.prompt(question.intern).then((answers) => {
     let employee = new Intern(
       answers.internName,
@@ -142,6 +141,8 @@ function addEngineer() {
   });
 }
 
+//this function builds my HTML file
+
 function buildTeam() {
   let html = `
     <!DOCTYPE html>
@@ -159,18 +160,19 @@ function buildTeam() {
 <body>
 
     `;
+
+//loop to create cards and values
+
   for (let i = 0; i < team.length; i++) {
     html += `
     <div class="card" style="width: 18rem;">
       <div class="card-body">
         <h5 class="card-title">${team[i].getRole()}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
         <p class="card-text">${team[i].name}</p>
         <p class="card-text">${team[i].id}</p>
         <p class="card-text">${team[i].email}</p>
         <p class="card-text">${team[i].special}</p>
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
+        <a href="#" class="card-link">${team[i].email}</a>
       </div>
     </div>
         `;

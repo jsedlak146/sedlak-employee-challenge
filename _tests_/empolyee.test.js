@@ -1,3 +1,5 @@
+//This file is the tests for my Employee.js
+
 const Employee = require("../lib/employee");
 
 describe("this tests employee objects", () => {

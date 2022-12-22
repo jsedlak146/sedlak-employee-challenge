@@ -1,3 +1,5 @@
+//This file is the test for my Intern.js
+
 const Intern = require("../lib/intern");
 
 describe("this tests intern objects", () => 

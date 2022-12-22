@@ -1,3 +1,5 @@
+//This file is the tests for my Manager.js 
+
 const Manager = require("../lib/manager");
 
 describe("this tests manager objects", () =>
